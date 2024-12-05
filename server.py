@@ -147,15 +147,15 @@ if __name__ == "__main__":
 
 
     # socketio.run(app, host="0.0.0.0", port="5000", debug=True, ssl_context=('server.crt', 'server.key'))
+    socketio.run(app, host="0.0.0.0", port=5000, debug=True)
 
-
-    import eventlet
-    eventlet.wsgi.server(
-        eventlet.wrap_ssl(
-            eventlet.listen(('0.0.0.0', 5000)),
-            certfile='server.crt',
-            keyfile='server.key',
-            server_side=True,
-        ),
-        app,
-    )
+    # import eventlet
+    # eventlet.wsgi.server(
+    #     eventlet.wrap_ssl(
+    #         eventlet.listen(('0.0.0.0', 5000)),
+    #         certfile='server.crt',
+    #         keyfile='server.key',
+    #         server_side=True,
+    #     ),
+    #     app,
+    # )
